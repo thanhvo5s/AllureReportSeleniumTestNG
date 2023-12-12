@@ -23,7 +23,7 @@ public class BaseTest {
 		chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
 		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
-		chromeOptions.add_argument("--remote-debugging-port=9222");
+		chromeOptions.addArguments("--remote-debugging-port=9222");
 		chromeOptions.addArguments("--headless");
 	}
 	
