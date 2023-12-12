@@ -17,12 +17,14 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver");
 		
 		chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+		//chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
 		chromeOptions.addArguments("disable-infobars"); // disabling infobars
 		chromeOptions.addArguments("--disable-extensions"); // disabling extensions
 		chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
 		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
+		chromeOptions.add_argument("--remote-debugging-port=9222")
+		chromeOptions.addArguments("--headless");
 	}
 	
 	public WebDriver GetDriver() {
