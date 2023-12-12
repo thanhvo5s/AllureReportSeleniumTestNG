@@ -35,6 +35,7 @@ jobs:
         unzip /tmp/chromedriver/chromedriver.zip chromedriver-linux64/chromedriver
         cp chromedriver-linux64/chromedriver chromedriver
         chmod +x chromedriver
+        mkdir /drivers/
         cp chromedriver drivers/chromedriver    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
