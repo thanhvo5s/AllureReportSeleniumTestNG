@@ -34,7 +34,11 @@ jobs:
         wget -O /tmp/chromedriver/chromedriver.zip $CHROMEDRIVER_URL
         unzip /tmp/chromedriver/chromedriver.zip chromedriver-linux64/chromedriver
         cp chromedriver-linux64/chromedriver chromedriver
-        chmod +x chromedriver 
+        chmod +x chromedriver
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get --only-upgrade install google-chrome-stable    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
