@@ -12,6 +12,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import vss.welcome.WelcomeSelenium.Pages.GooglePage;
 import vss.welcome.WelcomeSelenium.Utils.TestListenerDemo;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @Listeners({TestListenerDemo.class})
 @Epic("EPIC 1: Regression test")
@@ -19,7 +20,9 @@ import vss.welcome.WelcomeSelenium.Utils.TestListenerDemo;
 public class GoogleTest extends BaseTest {
 	@BeforeClass
     public void before_class() {
-		browser = new ChromeDriver();
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+		browser = new ChromeDriver(chromeOptions);
 	}
 	
 	@Test(description="Verify the first search result in Google Search")
