@@ -19,7 +19,7 @@ import vss.welcome.WelcomeSelenium.Utils.TestListenerDemo;
 public class GoogleTest extends BaseTest {
 	@BeforeClass
     public void before_class() {
-		browser = new ChromeDriver(chromeOptions);
+		browser = new ChromeDriver();
 	}
 	
 	@Test(description="Verify the first search result in Google Search")

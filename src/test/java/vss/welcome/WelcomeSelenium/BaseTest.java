@@ -2,21 +2,21 @@ package vss.welcome.WelcomeSelenium;
 
 import org.openqa.selenium.WebDriver;
 import java.io.File;
-import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseTest {
 	WebDriver browser;
-	ChromeOptions chromeOptions;
+	//ChromeOptions chromeOptions;
 	public BaseTest() {
-		System.out.println("driver path = " + System.getProperty("user.dir") + "//chromedriver");
-		File f = new File(System.getProperty("user.dir") + "//chromedriver");
-		if(f.exists() && !f.isDirectory()) { 
-			System.out.println("File Exists");
-		}
-		else System.out.println("File NOT Exists");
+		//System.out.println("driver path = " + System.getProperty("user.dir") + "//chromedriver");
+		//File f = new File(System.getProperty("user.dir") + "//chromedriver");
+		//if(f.exists() && !f.isDirectory()) { 
+		//	System.out.println("File Exists");
+		//}
+		//else System.out.println("File NOT Exists");
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//chromedriver");
 		
-		chromeOptions = new ChromeOptions();
+		//chromeOptions = new ChromeOptions();
 		//chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
 		//chromeOptions.addArguments("disable-infobars"); // disabling infobars
 		//chromeOptions.addArguments("--disable-extensions"); // disabling extensions
